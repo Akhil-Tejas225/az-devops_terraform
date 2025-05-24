@@ -36,7 +36,7 @@ resource "azurerm_kubernetes_cluster" "akscluster" {
 resource "null_resource" "getkubecred" {
   provisioner "local-exec" {
     command = <<EOT
-    az aks get-credentials --resource-group ${azurerm_resource_group.RG.name} --name ${azurerm_kubernetes_cluster.akscluster.name}
+    az aks get-credentials --resource-group ${azurerm_resource_group.RG.name} --name ${azurerm_kubernetes_cluster.akscluster.name} --overwrite-existing
     EOT
   }
 }
