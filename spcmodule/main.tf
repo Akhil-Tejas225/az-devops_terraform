@@ -24,13 +24,13 @@ resource "azurerm_kubernetes_cluster" "akscluster" {
   identity {
   type = "SystemAssigned"
 }
-  linux_profile {
-    admin_username = var.azurerm_kubernetes_cluster.admin_username
-    ssh_key {
-      key_data = tls_private_key.tls_private_key.public_key_openssh
-    }
+  # linux_profile {
+  #   admin_username = var.azurerm_kubernetes_cluster.admin_username
+  #   ssh_key {
+  #     key_data = tls_private_key.tls_private_key.public_key_openssh
+  #   }
 
-  }
+  # }
 
 }
 resource "null_resource" "getkubecred" {
