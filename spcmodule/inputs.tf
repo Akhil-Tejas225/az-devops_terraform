@@ -16,7 +16,7 @@ variable "azurerm_kubernetes_cluster" {
     location              = "centralindia"
     vm_size               = "Standard_B2s"
     node_count            = 1
-    random_id_byte_length = 1
+    random_id_byte_length = 3
     dns_label             = "aks225"
     aksname               = "akhilsaks"
     admin_username        = "akhilgc009"

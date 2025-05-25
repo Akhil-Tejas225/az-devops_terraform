@@ -15,7 +15,7 @@ resource "azurerm_kubernetes_cluster" "akscluster" {
   name                = var.azurerm_kubernetes_cluster.aksname
   location            = var.azurerm_kubernetes_cluster.location
   resource_group_name = azurerm_resource_group.RG.name
-  dns_prefix          = "${var.azurerm_kubernetes_cluster.random_id_byte_length}${var.azurerm_kubernetes_cluster.dns_label}"
+  dns_prefix          = "${var.azurerm_kubernetes_cluster.random_id_byte_length}${random_id.dns.hex}"
   default_node_pool {
     name       = "default"
     vm_size    = var.azurerm_kubernetes_cluster.vm_size
