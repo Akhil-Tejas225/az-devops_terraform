@@ -5,16 +5,14 @@ terraform {
       version = "4.29.0"
     }
   }
-}
-terraform {
   backend "azurerm" {
       resource_group_name  = "k8s"
       storage_account_name = "k8ssa225"
       container_name       = "container225"
       key                  = "terraform.tfstate"
   }
-  
 }
+
 
 provider "azurerm" {
   features {}
