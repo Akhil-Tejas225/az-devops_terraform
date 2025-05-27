@@ -1,0 +1,10 @@
+---
+name: Hello-world
+on: work_dispatch  #work_dispatch is event or trigger which meant that this workflow is triggered manually
+Jobs:
+  First-Job:  # Name of the job can be anything all the keys that are mentioned here such as name,on,jobs -name are to be used as it is
+  steps: 
+    - name: print greeting
+      run: echo "hello-world"
+    - name: print goodbye
+      run: echo "Done -bye" 
